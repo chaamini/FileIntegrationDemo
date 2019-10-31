@@ -16,6 +16,6 @@ Once you are done with the above steps create the CAR (Carbon Application Archiv
 	
 [1] https://docs.wso2.com/display/EI650/Exposing+MongoDB+as+a+Data+Service
 
-[2] https://docs.wso2.com/display/EI650/Working+with+WSO2+Integration+Studio#WorkingwithWSO2IntegrationStudioPackagingESBartifact
+[2]https://docs.wso2.com/display/EI650/Working+with+WSO2+Integration+Studio#WorkingwithWSO2IntegrationStudioPackagingESBartifact
 
 [3 ]https://docs.wso2.com/display/EI650/Working+with+WSO2+Integration+Studio#WorkingwithWSO2IntegrationStudio-TestingtheESBartifacts
