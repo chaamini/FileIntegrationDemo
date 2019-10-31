@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="FileProxy" startOnLoad="true" transports="vfs" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="full"/>
+            <datamapper config="gov:datamapper/csvToJson.dmc" inputSchema="gov:datamapper/csvToJson_inputSchema.json" inputType="CSV" outputSchema="gov:datamapper/csvToJson_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/csvToJson_xsltStyleSheet.xml"/>
+            <log level="full"/>
+            <iterate expression="$body//data">
+                <target>
+                    <sequence>
+                        <payloadFactory media-type="xml">
+                            <format>
+                                <body xmlns="">
+                                    <name>$1</name>
+                                    <city>$2</city>
+                                    <bloodGroup>$4</bloodGroup>
+                                    <address>$3</address>
+                                </body>
+                            </format>
+                            <args>
+                                <arg evaluator="xml" expression="$body//data/name"/>
+                                <arg evaluator="xml" expression="$body//data/City"/>
+                                <arg evaluator="xml" expression="$body//data/address"/>
+                                <arg evaluator="xml" expression="$body//data/bloodGroup"/>
+                            </args>
+                        </payloadFactory>
+                        <log level="full"/>
+                        <call>
+                            <endpoint key="mongoEndpoint"/>
+                        </call>
+                        <log level="full"/>
+                    </sequence>
+                </target>
+            </iterate>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+    <parameter name="transport.PollInterval">4</parameter>
+    <parameter name="transport.vfs.FileURI">file:///Users/chaamini/IntegrationStudio/Demos/FileIntegrationDemo/Files/In</parameter>
+    <parameter name="transport.vfs.ContentType">text/plain</parameter>
+    <parameter name="transport.vfs.ActionAfterProcess">MOVE</parameter>
+    <parameter name="transport.vfs.MoveAfterFailure">file:///Users/chaamini/IntegrationStudio/Demos/FileIntegrationDemo/Files/Error</parameter>
+    <parameter name="transport.vfs.FileNamePattern">.*.csv</parameter>
+    <parameter name="transport.vfs.MoveAfterProcess">file:///Users/chaamini/IntegrationStudio/Demos/FileIntegrationDemo/Files/Out</parameter>
+</proxy>

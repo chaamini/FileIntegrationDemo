@@ -1,0 +1,24 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+
+var count_i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547 = 0;
+outputroot =  {};
+outputroot.data =  [];
+
+for(i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547 in inputroot){
+outputroot.data[count_i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547] =  {};
+outputroot.data[count_i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547].name = inputroot[i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547].Lois;
+outputroot.data[count_i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547].City = inputroot[i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547]['New Orleans'];
+outputroot.data[count_i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547].bloodGroup = inputroot[i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547]['O+'];
+outputroot.data[count_i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547].address = inputroot[i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547]['Blue Gum St #6474'];
+
+count_i_inputroot_5da55ad0_b816_4bfa_8005_61d18eb11547++;
+}
+return outputroot;
+};
+
+
+
+
+
+

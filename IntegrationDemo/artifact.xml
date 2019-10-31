@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="FileProxy" groupId="com.example.IntegrationDemo.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/FileProxy.xml</file>
+    </artifact>
+    <artifact name="mongoEndpoint" groupId="com.example.IntegrationDemo.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/mongoEndpoint.xml</file>
+    </artifact>
+</artifacts>
