@@ -8,9 +8,9 @@ Before you run the sample, please make sure you have completed the following ste
 - The file used for the integration is “patientRecords.csv” which you can find inside the “~/FIle/In” path of this repository. Make sure to copy the file to the folder path defined in "transport.vfs.FileURI" in the above step.
 - Follow the link [1] to create a data service to expose MongoDB data. Here I have created a POST resource as following which is mapped to the end point definition in mongoEndpoint.xml. Also create GET resources with the desired criteria to execute certain queries on the saved data.
 
-| Resource Path | Resource Method |
-| --- | --- |
-| addPatientRecord | POST |
+			| Resource Path | Resource Method |
+			| --- | --- |
+			| addPatientRecord | POST |
 
 Once you are done with the above steps create the CAR (Carbon Application Archive) file [2] and run the sample [3]
 	
