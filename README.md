@@ -15,5 +15,5 @@ Before you run the sample, please make sure you have completed the following ste
 Once you are done with the above steps create the CAR (Carbon Application Archive) file [2] and run the sample [3]
 	
 [1] https://docs.wso2.com/display/EI650/Exposing+MongoDB+as+a+Data+Service
-[2] https://docs.wso2.com/display/EI650/Working+with+WSO2+Integration+Studio#WorkingwithWSO2IntegrationStudioPackagingESBartifacts	
+[2] https://docs.wso2.com/display/EI650/Working+with+WSO2+Integration+Studio#WorkingwithWSO2IntegrationStudioPackagingESBartifact
 [3 ]https://docs.wso2.com/display/EI650/Working+with+WSO2+Integration+Studio#WorkingwithWSO2IntegrationStudio-TestingtheESBartifacts
